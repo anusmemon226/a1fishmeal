@@ -1,54 +1,126 @@
+:root {
+  --primary: #0b3c5d;
+  --secondary: #1d70a2;
+  --light: #f4f7fb;
+  --dark: #1f2933;
+  --border: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  background: #f7f7f7;
-  color: #333;
-  line-height: 1.6;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--dark);
+  background: var(--light);
+  line-height: 1.7;
 }
 
 header {
-  background: #0b3c5d;
-  color: white;
-  padding: 20px 0;
+  background: white;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.container {
-  width: 90%;
-  max-width: 1100px;
+.header-inner {
+  max-width: 1200px;
   margin: auto;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary);
 }
 
 nav a {
-  color: white;
-  margin-right: 15px;
+  margin-left: 20px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
+  color: var(--dark);
 }
 
-section {
+nav a:hover {
+  color: var(--secondary);
+}
+
+.hero {
+  background: linear-gradient(120deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 80px 20px;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 650px;
+  font-size: 18px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 28px;
   background: white;
-  margin: 20px 0;
-  padding: 25px;
-  border-radius: 4px;
+  color: var(--primary);
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
 }
 
-h1, h2, h3 {
-  color: #0b3c5d;
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.section-title {
+  margin-bottom: 35px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
 footer {
-  background: #0b3c5d;
+  background: var(--primary);
   color: white;
   text-align: center;
-  padding: 15px;
-  margin-top: 30px;
-}
-
-.cta {
-  background: #1d70a2;
-  color: white;
-  padding: 15px;
-  text-align: center;
-  font-weight: bold;
-  margin-top: 20px;
+  padding: 30px 20px;
+  font-size: 14px;
 }
